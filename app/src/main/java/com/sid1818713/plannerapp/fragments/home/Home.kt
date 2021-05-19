@@ -1,10 +1,11 @@
-package com.sid1818713.plannerapp
+package com.sid1818713.plannerapp.fragments.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.sid1818713.plannerapp.R
 
 class Home : Fragment() {
     override fun onCreateView(

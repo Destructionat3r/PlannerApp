@@ -1,4 +1,4 @@
-package com.sid1818713.plannerapp.data
+package com.sid1818713.plannerapp.notedata
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
