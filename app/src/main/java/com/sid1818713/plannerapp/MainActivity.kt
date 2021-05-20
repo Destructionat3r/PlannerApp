@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 changeFragment(Home())
             }
 
-            R.id.classes -> {
+            R.id.modules -> {
                 setToolbarTitle("Classes")
                 changeFragment(Modules())
             }

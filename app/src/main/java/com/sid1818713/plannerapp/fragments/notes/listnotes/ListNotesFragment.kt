@@ -25,7 +25,7 @@ class ListNotesFragment : Fragment() {
 
         // Recyclerview
         val adapter = ListAdapter()
-        val recyclerView = view.recyclerview
+        val recyclerView = view.noteRecyclerView
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
@@ -35,7 +35,7 @@ class ListNotesFragment : Fragment() {
             adapter.setData(note)
         })
 
-        view.floatingActionButton.setOnClickListener {
+        view.noteFab.setOnClickListener {
             findNavController().navigate(R.id.action_listNotesFragment_to_addNotesFragment)
         }
 

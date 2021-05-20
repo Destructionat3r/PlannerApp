@@ -7,7 +7,7 @@
     tools:context=".fragments.notes.Notes">
 
     <fragment
-        android:id="@+id/fragment"
+        android:id="@+id/noteFragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,5 +17,5 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/my_nav" />
+        app:navGraph="@navigation/note_nav" />
 </androidx.constraintlayout.widget.ConstraintLayout>

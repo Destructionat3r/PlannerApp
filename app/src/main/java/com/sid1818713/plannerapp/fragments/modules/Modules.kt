@@ -13,6 +13,6 @@ class Modules : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_classes, container, false)
+        return inflater.inflate(R.layout.fragment_modules, container, false)
     }
 }

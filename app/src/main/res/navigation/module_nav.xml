@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/module_nav"
+    app:startDestination="@id/listModulesFragment">
+
+    <fragment
+        android:id="@+id/listModulesFragment"
+        android:name="com.sid1818713.plannerapp.fragments.modules.listmodules.ListModulesFragment"
+        android:label="Modules"
+        tools:layout="@layout/fragment_list_modules" >
+        <action
+            android:id="@+id/action_listModulesFragment_to_addModulesFragment"
+            app:destination="@id/addModulesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addModulesFragment"
+        android:name="com.sid1818713.plannerapp.fragments.modules.addmodules.AddModulesFragment"
+        android:label="Add Module"
+        tools:layout="@layout/fragment_add_modules" >
+        <action
+            android:id="@+id/action_addModulesFragment_to_listModulesFragment"
+            app:destination="@id/listModulesFragment" />
+    </fragment>
+</navigation>

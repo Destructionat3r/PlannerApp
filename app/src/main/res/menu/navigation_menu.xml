@@ -7,9 +7,9 @@
         android:title="Home"
         android:icon="@drawable/ic_home"/>
     <item
-        android:id="@+id/classes"
-        android:title="Classes"
-        android:icon="@drawable/ic_classes"/>
+        android:id="@+id/modules"
+        android:title="Modules"
+        android:icon="@drawable/ic_modules"/>
     <item
         android:id="@+id/notes"
         android:title="Notes"

@@ -4,43 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.notes.addnotes.AddNotesFragment"
-    android:padding="24dp">
+    android:padding="24dp"
+    tools:context=".fragments.modules.addmodules.AddModulesFragment">
 
     <EditText
-        android:id="@+id/addNoteTitle_et"
+        android:id="@+id/addModuleName_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:ems="10"
+        android:hint="Name of module"
         android:inputType="textPersonName"
-        android:hint="Note Title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/addNoteContents_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Note Contents"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addNoteTitle_et" />
-
     <Button
-        android:id="@+id/addNote_btn"
+        android:id="@+id/addModule_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Add Note"
+        android:text="Add Module"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addNoteContents_et" />
+        app:layout_constraintTop_toBottomOf="@+id/addModuleName_et" />
 </androidx.constraintlayout.widget.ConstraintLayout>
