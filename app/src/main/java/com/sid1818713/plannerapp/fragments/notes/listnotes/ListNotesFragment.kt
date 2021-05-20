@@ -24,7 +24,7 @@ class ListNotesFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_list_notes, container, false)
 
         // Recyclerview
-        val adapter = ListAdapter()
+        val adapter = ListNotesAdapter()
         val recyclerView = view.noteRecyclerView
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())

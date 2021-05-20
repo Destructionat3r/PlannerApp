@@ -11,7 +11,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class ModuleViewModel(application: Application): AndroidViewModel(application) {
-    private val readAllData: LiveData<List<Module>>
+    val readAllData: LiveData<List<Module>>
     private val repository: ModuleRepository
 
     init {

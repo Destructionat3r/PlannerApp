@@ -9,7 +9,7 @@ import com.sid1818713.plannerapp.R
 import com.sid1818713.plannerapp.notedata.model.Note
 import kotlinx.android.synthetic.main.custom_note_row.view.*
 
-class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
+class ListNotesAdapter: RecyclerView.Adapter<ListNotesAdapter.MyViewHolder>() {
     private var noteList = emptyList<Note>()
 
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {

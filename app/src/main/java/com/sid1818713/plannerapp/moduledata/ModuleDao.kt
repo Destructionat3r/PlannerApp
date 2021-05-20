@@ -12,6 +12,6 @@ interface ModuleDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun addModule(module: Module)
 
-    @Query("SELECT * FROM module_table ORDER BY id ASC")
+    @Query("SELECT * FROM module_table ORDER BY module ASC")
     fun readAllData(): LiveData<List<Module>>
 }

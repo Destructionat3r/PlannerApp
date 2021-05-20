@@ -33,11 +33,12 @@ class AddModulesFragment : Fragment() {
     }
 
     private fun insertDataToDatabase() {
+        val moduleNumber = addModuleNumber_txt.text.toString()
         val moduleName = addModuleName_et.text.toString()
 
         if (inputCheck(moduleName)) {
             // Create Module Object
-            val module = Module(0, moduleName)
+            val module = Module(0, moduleNumber, moduleName)
 
             // Add Data to Database
             mModuleViewModel.addModule(module)

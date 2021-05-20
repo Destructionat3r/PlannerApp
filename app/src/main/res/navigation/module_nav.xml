@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_listModulesFragment_to_addModulesFragment"
             app:destination="@id/addModulesFragment" />
+        <action
+            android:id="@+id/action_listModulesFragment_to_moduleInfoFragment"
+            app:destination="@id/moduleInfoFragment" />
     </fragment>
     <fragment
         android:id="@+id/addModulesFragment"
@@ -22,5 +25,17 @@
         <action
             android:id="@+id/action_addModulesFragment_to_listModulesFragment"
             app:destination="@id/listModulesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moduleInfoFragment"
+        android:name="com.sid1818713.plannerapp.fragments.modules.moduleinfo.ModuleInfoFragment"
+        android:label="fragment_module_info"
+        tools:layout="@layout/fragment_module_info" >
+        <action
+            android:id="@+id/action_moduleInfoFragment_to_listModulesFragment"
+            app:destination="@id/listModulesFragment" />
+        <argument
+            android:name="currentModule"
+            app:argType="com.sid1818713.plannerapp.moduledata.model.Module" />
     </fragment>
 </navigation>
