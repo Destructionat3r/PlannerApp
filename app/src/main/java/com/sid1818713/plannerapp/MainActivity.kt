@@ -6,10 +6,8 @@ import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.google.android.material.navigation.NavigationView
-import com.sid1818713.plannerapp.fragments.classes.Classes
+import com.sid1818713.plannerapp.fragments.modules.Modules
 import com.sid1818713.plannerapp.fragments.home.Home
 import com.sid1818713.plannerapp.fragments.notes.Notes
 import kotlinx.android.synthetic.main.activity_main.*
@@ -43,7 +41,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             R.id.classes -> {
                 setToolbarTitle("Classes")
-                changeFragment(Classes())
+                changeFragment(Modules())
             }
 
             R.id.notes -> {

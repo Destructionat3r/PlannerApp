@@ -1,4 +1,4 @@
-package com.sid1818713.plannerapp.fragments.classes
+package com.sid1818713.plannerapp.fragments.modules
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.sid1818713.plannerapp.R
 
-class Classes : Fragment() {
+class Modules : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

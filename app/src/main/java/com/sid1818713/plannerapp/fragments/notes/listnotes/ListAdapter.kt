@@ -1,11 +1,12 @@
-package com.sid1818713.plannerapp.fragments.listnotes
+package com.sid1818713.plannerapp.fragments.notes.listnotes
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.sid1818713.plannerapp.R
-import com.sid1818713.plannerapp.notedata.Note
+import com.sid1818713.plannerapp.notedata.model.Note
 import kotlinx.android.synthetic.main.custom_note_row.view.*
 
 class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
@@ -25,9 +26,13 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = noteList[position]
-        holder.itemView.noteId_txt.text = currentItem.id.toString()
         holder.itemView.noteTitle_txt.text = currentItem.noteTitle
         holder.itemView.noteContents_txt.text = currentItem.noteContents
+
+        holder.itemView.noteRowLayout.setOnClickListener {
+            val action = ListNotesFragmentDirections.actionListNotesFragmentToUpdateNotesFragment(currentItem)
+            holder.itemView.findNavController().navigate(action)
+        }
     }
 
     fun setData(note: List<Note>) {

@@ -1,4 +1,4 @@
-package com.sid1818713.plannerapp.fragments.addnotes
+package com.sid1818713.plannerapp.fragments.notes.addnotes
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -10,8 +10,8 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.sid1818713.plannerapp.R
-import com.sid1818713.plannerapp.notedata.Note
-import com.sid1818713.plannerapp.notedata.NoteViewModel
+import com.sid1818713.plannerapp.notedata.model.Note
+import com.sid1818713.plannerapp.notedata.viewmodel.NoteViewModel
 import kotlinx.android.synthetic.main.fragment_add_notes.*
 import kotlinx.android.synthetic.main.fragment_add_notes.view.*
 
@@ -44,12 +44,12 @@ class AddNotesFragment : Fragment() {
 
             //Add Data to Database
             mNoteViewModel.addNote(note)
-            Toast.makeText(requireContext(), "Note added!", Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(), "Note added!", Toast.LENGTH_SHORT).show()
 
             //Navigate Back
             findNavController().navigate(R.id.action_addNotesFragment_to_listNotesFragment)
         } else {
-            Toast.makeText(requireContext(), "Please fill out all fields", Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(), "Please fill out all fields", Toast.LENGTH_SHORT).show()
         }
     }
 

@@ -1,4 +1,4 @@
-package com.sid1818713.plannerapp.fragments.listnotes
+package com.sid1818713.plannerapp.fragments.notes.listnotes
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sid1818713.plannerapp.R
-import com.sid1818713.plannerapp.notedata.NoteViewModel
+import com.sid1818713.plannerapp.notedata.viewmodel.NoteViewModel
 import kotlinx.android.synthetic.main.fragment_list_notes.view.*
 
 class ListNotesFragment : Fragment() {
