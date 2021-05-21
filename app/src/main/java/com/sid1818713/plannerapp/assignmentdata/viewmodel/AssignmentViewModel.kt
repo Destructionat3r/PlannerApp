@@ -11,7 +11,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class AssignmentViewModel(application: Application): AndroidViewModel(application) {
-    private val readAllData: LiveData<List<Assignment>>
+    val readAllData: LiveData<List<Assignment>>
     private val repository: AssignmentRepository
 
     init {

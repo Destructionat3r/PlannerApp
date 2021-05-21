@@ -13,7 +13,7 @@ interface AssignmentDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addAssignment(assignment: Assignment)
 
-    @Query("SELECT * FROM assignment_database ORDER BY moduleNumber ASC")
+    @Query("SELECT * FROM assignment_database ORDER BY assignmentDue ASC")
     fun readAllData(): LiveData<List<Assignment>>
 
     @Query("SELECT * FROM assignment_database WHERE moduleNumber = :moduleNumber ORDER BY assignmentNumber ASC")

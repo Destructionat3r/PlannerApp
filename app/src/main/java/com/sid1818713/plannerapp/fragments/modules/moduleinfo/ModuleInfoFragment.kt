@@ -49,7 +49,7 @@ class ModuleInfoFragment : Fragment() {
         })
 
         binding.assignmentFab.setOnClickListener {
-            mModuleViewModel.saveModule(args.currentModule.moduleNumber)
+            mModuleViewModel.saveModule(args.currentModule.moduleNumber, args.currentModule.module)
             findNavController().navigate(R.id.action_moduleInfoFragment_to_addAssignmentFragment)
         }
 

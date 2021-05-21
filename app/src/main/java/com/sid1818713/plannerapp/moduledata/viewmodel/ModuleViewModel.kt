@@ -12,10 +12,12 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class ModuleViewModel(application: Application): AndroidViewModel(application) {
-    val readAllData: LiveData<List<Module>>
-    private val _module = MutableLiveData("Test")
-    val module: LiveData<String> = _module
     private val repository: ModuleRepository
+    private val _moduleNumber = MutableLiveData("Num")
+    private val _moduleName = MutableLiveData("Name")
+    val moduleNumber: LiveData<String> = _moduleNumber
+    val moduleName: LiveData<String> = _moduleName
+    val readAllData: LiveData<List<Module>>
 
     init {
         val moduleDao = ModuleDatabase.getDatabase(application).moduleDao()
@@ -29,7 +31,8 @@ class ModuleViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    fun saveModule(moduleName: String) {
-        _module.value = moduleName
+    fun saveModule(moduleNumber: String, moduleName: String) {
+        _moduleNumber.value = moduleNumber
+        _moduleName.value = moduleName
     }
 }
