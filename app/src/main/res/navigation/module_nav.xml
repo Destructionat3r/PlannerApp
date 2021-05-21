@@ -29,11 +29,26 @@
     <fragment
         android:id="@+id/moduleInfoFragment"
         android:name="com.sid1818713.plannerapp.fragments.modules.moduleinfo.ModuleInfoFragment"
-        android:label="fragment_module_info"
+        android:label="Module Info"
         tools:layout="@layout/fragment_module_info" >
         <action
             android:id="@+id/action_moduleInfoFragment_to_listModulesFragment"
             app:destination="@id/listModulesFragment" />
+        <argument
+            android:name="currentModule"
+            app:argType="com.sid1818713.plannerapp.moduledata.model.Module" />
+        <action
+            android:id="@+id/action_moduleInfoFragment_to_addAssignmentFragment"
+            app:destination="@id/addAssignmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAssignmentFragment"
+        android:name="com.sid1818713.plannerapp.fragments.modules.moduleinfo.addassignment.AddAssignmentFragment"
+        android:label="Add Assignment"
+        tools:layout="@layout/fragment_add_assignment" >
+        <action
+            android:id="@+id/action_addAssignmentFragment_to_moduleInfoFragment"
+            app:destination="@id/moduleInfoFragment" />
         <argument
             android:name="currentModule"
             app:argType="com.sid1818713.plannerapp.moduledata.model.Module" />
