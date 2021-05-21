@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ListAdapter
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -15,24 +16,29 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Update
 import com.sid1818713.plannerapp.R
 import com.sid1818713.plannerapp.assignmentdata.viewmodel.AssignmentViewModel
+import com.sid1818713.plannerapp.databinding.FragmentModuleInfoBinding
+import com.sid1818713.plannerapp.moduledata.viewmodel.ModuleViewModel
 import kotlinx.android.synthetic.main.fragment_module_info.view.*
 
 class ModuleInfoFragment : Fragment() {
     private val args by navArgs<ModuleInfoFragmentArgs>()
     private lateinit var mAssignmentViewModel: AssignmentViewModel
+    private val mModuleViewModel: ModuleViewModel by activityViewModels()
+
+    private var _binding: FragmentModuleInfoBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_module_info, container, false)
+        _binding = FragmentModuleInfoBinding.inflate(inflater, container, false)
 
-        view.moduleTitle_txt.text = args.currentModule.module
+        binding.moduleTitleTxt.setText(args.currentModule.module)
 
         // RecyclerView
         val adapter = ModuleInfoAdapter()
-        val recyclerview = view.assignmentRecyclerView
+        val recyclerview = binding.assignmentRecyclerView
         recyclerview.adapter = adapter
         recyclerview.layoutManager = LinearLayoutManager(requireContext())
 
@@ -42,10 +48,11 @@ class ModuleInfoFragment : Fragment() {
             adapter.setData(assignment)
         })
 
-        view.assignmentFab.setOnClickListener {
+        binding.assignmentFab.setOnClickListener {
+            mModuleViewModel.saveModule(args.currentModule.moduleNumber)
             findNavController().navigate(R.id.action_moduleInfoFragment_to_addAssignmentFragment)
         }
 
-        return view
+        return binding.root
     }
 }

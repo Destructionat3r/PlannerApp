@@ -28,16 +28,10 @@ class ModuleInfoAdapter: RecyclerView.Adapter<ModuleInfoAdapter.MyViewHolder>() 
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        //val currentModule = moduleList[position]
         val currentItem = assignmentList[position]
         holder.itemView.assignmentNumber_txt.text = currentItem.assignmentNumber
         holder.itemView.assignmentDetails_txt.text = currentItem.assignmentDetails
         holder.itemView.assignmentDueDate_txt.text = currentItem.assignmentDue
-
-        /*holder.itemView.addAssignment_btn.setOnClickListener {
-            val action = ModuleInfoFragmentDirections.actionModuleInfoFragmentToAddAssignmentFragment(currentModule)
-            holder.itemView.findNavController().navigate(action)
-        }*/
     }
 
     fun setData(assignment: List<Assignment>) {

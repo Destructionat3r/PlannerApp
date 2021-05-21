@@ -13,7 +13,8 @@ import kotlinx.coroutines.launch
 
 class ModuleViewModel(application: Application): AndroidViewModel(application) {
     val readAllData: LiveData<List<Module>>
-    //private val _module = MutableLiveData("Test")
+    private val _module = MutableLiveData("Test")
+    val module: LiveData<String> = _module
     private val repository: ModuleRepository
 
     init {
@@ -28,7 +29,7 @@ class ModuleViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    /*fun saveModule(moduleName: String) {
+    fun saveModule(moduleName: String) {
         _module.value = moduleName
-    }*/
+    }
 }
