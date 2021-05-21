@@ -3,6 +3,7 @@ package com.sid1818713.plannerapp.moduledata.viewmodel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.sid1818713.plannerapp.moduledata.ModuleDatabase
 import com.sid1818713.plannerapp.moduledata.model.Module
@@ -12,6 +13,7 @@ import kotlinx.coroutines.launch
 
 class ModuleViewModel(application: Application): AndroidViewModel(application) {
     val readAllData: LiveData<List<Module>>
+    //private val _module = MutableLiveData("Test")
     private val repository: ModuleRepository
 
     init {
@@ -25,4 +27,8 @@ class ModuleViewModel(application: Application): AndroidViewModel(application) {
             repository.addModule(module)
         }
     }
+
+    /*fun saveModule(moduleName: String) {
+        _module.value = moduleName
+    }*/
 }

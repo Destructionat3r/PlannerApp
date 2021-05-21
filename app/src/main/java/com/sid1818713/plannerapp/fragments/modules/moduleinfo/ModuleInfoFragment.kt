@@ -28,8 +28,7 @@ class ModuleInfoFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_module_info, container, false)
 
-        //view.moduleTitle_txt.text = args.currentModule.module
-        view.moduleTitle_txt.text = "Mobile"
+        view.moduleTitle_txt.text = args.currentModule.module
 
         // RecyclerView
         val adapter = ModuleInfoAdapter()
@@ -39,7 +38,7 @@ class ModuleInfoFragment : Fragment() {
 
         // AssignmentViewModel
         mAssignmentViewModel = ViewModelProvider(this).get(AssignmentViewModel::class.java)
-        mAssignmentViewModel.readAssignmentData("M907").observe(viewLifecycleOwner, Observer { assignment ->
+        mAssignmentViewModel.readAssignmentData(args.currentModule.moduleNumber).observe(viewLifecycleOwner, Observer { assignment ->
             adapter.setData(assignment)
         })
 

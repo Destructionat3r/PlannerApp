@@ -17,8 +17,14 @@ import kotlinx.android.synthetic.main.fragment_list_modules.view.*
 class ListModulesFragment : Fragment() {
     private lateinit var mModuleViewModel: ModuleViewModel
 
+    //private var _binding: FragmentListModulesBinding? = null
+    //private var binding get() = _binding!!
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+                              savedInstanceState: Bundle?
+    ): View? {
+        //_binding = FragmentListModulesBinding.inflate(inflater, container, false)
+
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_list_modules, container, false)
 
@@ -36,7 +42,11 @@ class ListModulesFragment : Fragment() {
 
         view.moduleFab.setOnClickListener {
             findNavController().navigate(R.id.action_listModulesFragment_to_addModulesFragment)
-        }
+        }/*
+
+        view.moduleRecyclerView.setOnClickListener {
+            mModuleViewModel.saveModule()
+        }*/
 
         return view
     }

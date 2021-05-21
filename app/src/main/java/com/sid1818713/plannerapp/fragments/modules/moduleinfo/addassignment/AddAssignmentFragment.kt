@@ -57,7 +57,7 @@ class AddAssignmentFragment : Fragment() {
             Toast.makeText(requireContext(), "Assignment added", Toast.LENGTH_SHORT).show()
 
             //Navigate Back
-            findNavController().navigate(R.id.action_addAssignmentFragment_to_moduleInfoFragment)
+            findNavController().popBackStack()
         } else {
             Toast.makeText(requireContext(), "Please fill out all fields", Toast.LENGTH_SHORT).show()
         }
