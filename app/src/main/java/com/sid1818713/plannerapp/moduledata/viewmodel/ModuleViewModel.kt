@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.sid1818713.plannerapp.moduledata.ModuleDatabase
 import com.sid1818713.plannerapp.moduledata.model.Module
 import com.sid1818713.plannerapp.moduledata.repository.ModuleRepository
+import com.sid1818713.plannerapp.notedata.model.Note
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -28,6 +29,12 @@ class ModuleViewModel(application: Application): AndroidViewModel(application) {
     fun addModule(module: Module) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.addModule(module)
+        }
+    }
+
+    fun deleteModule(module: Module) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteModule(module)
         }
     }
 

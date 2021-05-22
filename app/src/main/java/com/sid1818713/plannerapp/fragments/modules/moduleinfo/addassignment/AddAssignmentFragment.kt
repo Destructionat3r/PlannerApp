@@ -91,7 +91,7 @@ class AddAssignmentFragment : Fragment() {
         val intent = Intent(Intent.ACTION_INSERT)
 
         intent.data = CalendarContract.Events.CONTENT_URI
-        intent.putExtra(CalendarContract.Events.TITLE, "${moduleNumber} - Assignment ${assignmentNumber}")
+        intent.putExtra(CalendarContract.Events.TITLE, "$moduleNumber - Assignment $assignmentNumber")
         intent.putExtra(CalendarContract.Events.DESCRIPTION, assignmentDetails)
         intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, calDate.getTimeInMillis())
         intent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, calDate.getTimeInMillis())

@@ -1,18 +1,21 @@
 package com.sid1818713.plannerapp.fragments.modules.listmodules
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ListAdapter
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sid1818713.plannerapp.R
 import com.sid1818713.plannerapp.moduledata.viewmodel.ModuleViewModel
 import kotlinx.android.synthetic.main.fragment_list_modules.view.*
+import kotlinx.android.synthetic.main.fragment_module_info.view.*
 
 class ListModulesFragment : Fragment() {
     private lateinit var mModuleViewModel: ModuleViewModel

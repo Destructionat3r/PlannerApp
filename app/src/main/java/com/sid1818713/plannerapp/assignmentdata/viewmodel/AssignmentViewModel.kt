@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.sid1818713.plannerapp.assignmentdata.AssignmentDatabase
 import com.sid1818713.plannerapp.assignmentdata.model.Assignment
 import com.sid1818713.plannerapp.assignmentdata.repository.AssignmentRepository
+import com.sid1818713.plannerapp.moduledata.model.Module
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -23,6 +24,18 @@ class AssignmentViewModel(application: Application): AndroidViewModel(applicatio
     fun addAssignment(assignment: Assignment) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.addAssignment(assignment)
+        }
+    }
+
+    fun deleteAssignment(assignment: Assignment) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteAssignment(assignment)
+        }
+    }
+
+    fun deleteModuleAssignments(moduleNumber: String) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteModuleAssignments(moduleNumber)
         }
     }
 

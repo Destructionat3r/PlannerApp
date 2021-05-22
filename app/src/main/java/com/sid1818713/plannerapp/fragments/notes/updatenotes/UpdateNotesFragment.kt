@@ -33,17 +33,17 @@ class UpdateNotesFragment : Fragment() {
         view.updateNoteContents_et.setText(args.currentNote.noteContents)
 
         view.updateNote_btn.setOnClickListener {
-            updateItem()
+            updateNote()
         }
 
         view.deleteNote_btn.setOnClickListener {
-            deleteItem()
+            deleteNote()
         }
 
         return view
     }
 
-    private fun updateItem() {
+    private fun updateNote() {
         val noteTitle = updateNoteTitle_et.text.toString()
         val noteContents = updateNoteContents_et.text.toString()
 
@@ -66,7 +66,7 @@ class UpdateNotesFragment : Fragment() {
         return !(TextUtils.isEmpty(noteTitle) || TextUtils.isEmpty(noteContents))
     }
 
-    private fun deleteItem() {
+    private fun deleteNote() {
         val builder = AlertDialog.Builder(requireContext())
         builder.setPositiveButton("Yes") { _, _ ->
             mNoteViewModel.deleteNote(args.currentNote)
