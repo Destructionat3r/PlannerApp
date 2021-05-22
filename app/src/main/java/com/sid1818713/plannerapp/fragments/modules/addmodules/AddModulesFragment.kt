@@ -2,11 +2,11 @@ package com.sid1818713.plannerapp.fragments.modules.addmodules
 
 import android.os.Bundle
 import android.text.TextUtils
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.sid1818713.plannerapp.R
@@ -18,11 +18,12 @@ import kotlinx.android.synthetic.main.fragment_add_modules.view.*
 class AddModulesFragment : Fragment() {
     private lateinit var mModuleViewModel: ModuleViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_add_modules, container, false)
-
         mModuleViewModel = ViewModelProvider(this).get(ModuleViewModel::class.java)
 
         view.addModule_btn.setOnClickListener {

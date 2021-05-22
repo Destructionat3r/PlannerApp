@@ -1,14 +1,14 @@
 package com.sid1818713.plannerapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
-import com.sid1818713.plannerapp.fragments.modules.Modules
 import com.sid1818713.plannerapp.fragments.home.Home
+import com.sid1818713.plannerapp.fragments.modules.Modules
 import com.sid1818713.plannerapp.fragments.notes.Notes
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*

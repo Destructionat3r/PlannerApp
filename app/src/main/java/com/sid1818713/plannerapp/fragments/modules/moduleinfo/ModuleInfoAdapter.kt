@@ -7,9 +7,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.sid1818713.plannerapp.R
 import com.sid1818713.plannerapp.assignmentdata.model.Assignment
-import com.sid1818713.plannerapp.moduledata.model.Module
 import kotlinx.android.synthetic.main.custom_assignment_row.view.*
-import kotlinx.android.synthetic.main.fragment_add_assignment.view.*
 
 class ModuleInfoAdapter: RecyclerView.Adapter<ModuleInfoAdapter.MyViewHolder>() {
     private var assignmentList = emptyList<Assignment>()

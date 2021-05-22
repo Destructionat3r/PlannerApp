@@ -15,11 +15,9 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.sid1818713.plannerapp.R
 import com.sid1818713.plannerapp.assignmentdata.model.Assignment
 import com.sid1818713.plannerapp.assignmentdata.viewmodel.AssignmentViewModel
 import com.sid1818713.plannerapp.databinding.FragmentUpdateAssignmentBinding
-import com.sid1818713.plannerapp.fragments.modules.moduleinfo.ModuleInfoFragmentArgs
 import com.sid1818713.plannerapp.moduledata.viewmodel.ModuleViewModel
 import kotlinx.android.synthetic.main.fragment_update_assignment.*
 import java.util.*
@@ -35,6 +33,8 @@ class UpdateAssignmentFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val date = assignmentArgs.currentAssignment.assignmentDue
+        val delim = "/"
         _binding = FragmentUpdateAssignmentBinding.inflate(inflater, container, false)
 
         mModuleViewModel.moduleNumber.observe(viewLifecycleOwner) { module ->
@@ -45,8 +45,6 @@ class UpdateAssignmentFragment : Fragment() {
             binding.uModuleNameTxt.setText(module).toString()
         }
 
-        val date = assignmentArgs.currentAssignment.assignmentDue
-        val delim = "/"
         val dateSplits = date.split(delim)
 
         binding.updateAssignmentNumberEt.setText(assignmentArgs.currentAssignment.assignmentNumber)

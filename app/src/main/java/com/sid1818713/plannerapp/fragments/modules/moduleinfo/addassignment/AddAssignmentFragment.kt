@@ -5,20 +5,17 @@ import android.os.Bundle
 import android.provider.CalendarContract
 import android.text.Editable
 import android.text.TextUtils
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
 import com.sid1818713.plannerapp.assignmentdata.model.Assignment
 import com.sid1818713.plannerapp.assignmentdata.viewmodel.AssignmentViewModel
 import com.sid1818713.plannerapp.databinding.FragmentAddAssignmentBinding
-import com.sid1818713.plannerapp.fragments.modules.moduleinfo.ModuleInfoFragmentArgs
 import com.sid1818713.plannerapp.moduledata.viewmodel.ModuleViewModel
 import kotlinx.android.synthetic.main.fragment_add_assignment.*
 import java.util.*
@@ -26,7 +23,6 @@ import java.util.*
 class AddAssignmentFragment : Fragment() {
     private lateinit var mAssignmentViewModel: AssignmentViewModel
     private val mModuleViewModel: ModuleViewModel by activityViewModels()
-    private val args by navArgs<ModuleInfoFragmentArgs>()
     private val binding get() = _binding!!
     private var _binding: FragmentAddAssignmentBinding? = null
 
