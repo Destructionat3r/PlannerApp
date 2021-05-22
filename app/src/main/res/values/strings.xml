@@ -25,5 +25,6 @@
     <string name="update_note">Update Note</string>
     <string name="delete_note">Delete Note</string>
     <string name="note_button">Note Title\n\nNote Contents</string>
-    <string name="assignment_button">Assignment Number - Assignment Details \n\nDue: Due Date</string>
+    <string name="assignment_button">Assignment Number - Assignment Details \n\nDue Date</string>
+    <string name="home_assignment">Module Number\n\nAssignment Number - Assignment Details</string>
 </resources>
