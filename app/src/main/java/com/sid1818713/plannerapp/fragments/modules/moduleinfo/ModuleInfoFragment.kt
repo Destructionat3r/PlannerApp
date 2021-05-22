@@ -37,6 +37,7 @@ class ModuleInfoFragment : Fragment() {
         _binding = FragmentModuleInfoBinding.inflate(inflater, container, false)
 
         binding.moduleTitleTxt.setText(args.currentModule.module)
+        mModuleViewModel.saveModule(args.currentModule.moduleNumber, args.currentModule.module)
 
         // RecyclerView
         val adapter = ModuleInfoAdapter()
@@ -51,7 +52,6 @@ class ModuleInfoFragment : Fragment() {
         })
 
         binding.assignmentFab.setOnClickListener {
-            mModuleViewModel.saveModule(args.currentModule.moduleNumber, args.currentModule.module)
             findNavController().navigate(R.id.action_moduleInfoFragment_to_addAssignmentFragment)
         }
 

@@ -12,11 +12,15 @@ class AssignmentRepository(private val assignmentDao: AssignmentDao) {
         assignmentDao.addAssignment(assignment)
     }
 
+    suspend fun updateAssignment(assignment: Assignment) {
+        assignmentDao.updateAssignment(assignment)
+    }
+
     suspend fun deleteAssignment(assignment: Assignment) {
         assignmentDao.deleteAssignment(assignment)
     }
 
-    suspend fun deleteModuleAssignments(moduleNumber: String) {
+    fun deleteModuleAssignments(moduleNumber: String) {
         assignmentDao.deleteModuleAssignments(moduleNumber)
     }
 

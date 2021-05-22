@@ -40,6 +40,9 @@
         <action
             android:id="@+id/action_moduleInfoFragment_to_addAssignmentFragment"
             app:destination="@id/addAssignmentFragment" />
+        <action
+            android:id="@+id/action_moduleInfoFragment_to_updateAssignmentFragment"
+            app:destination="@id/updateAssignmentFragment" />
     </fragment>
     <fragment
         android:id="@+id/addAssignmentFragment"
@@ -52,5 +55,17 @@
         <argument
             android:name="currentModule"
             app:argType="com.sid1818713.plannerapp.moduledata.model.Module" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateAssignmentFragment"
+        android:name="com.sid1818713.plannerapp.fragments.modules.moduleinfo.updateassignment.UpdateAssignmentFragment"
+        android:label="fragment_update_assignment"
+        tools:layout="@layout/fragment_update_assignment" >
+        <action
+            android:id="@+id/action_updateAssignmentFragment_to_moduleInfoFragment"
+            app:destination="@id/moduleInfoFragment" />
+        <argument
+            android:name="currentAssignment"
+            app:argType="com.sid1818713.plannerapp.assignmentdata.model.Assignment" />
     </fragment>
 </navigation>

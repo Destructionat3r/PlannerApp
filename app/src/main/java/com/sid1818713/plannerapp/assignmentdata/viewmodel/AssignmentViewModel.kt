@@ -27,6 +27,12 @@ class AssignmentViewModel(application: Application): AndroidViewModel(applicatio
         }
     }
 
+    fun updateAssignment(assignment: Assignment) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.updateAssignment(assignment)
+        }
+    }
+
     fun deleteAssignment(assignment: Assignment) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.deleteAssignment(assignment)

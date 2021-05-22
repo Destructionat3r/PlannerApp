@@ -12,7 +12,6 @@ import kotlinx.android.synthetic.main.custom_assignment_row.view.*
 import kotlinx.android.synthetic.main.fragment_add_assignment.view.*
 
 class ModuleInfoAdapter: RecyclerView.Adapter<ModuleInfoAdapter.MyViewHolder>() {
-    private var moduleList = emptyList<Module>()
     private var assignmentList = emptyList<Assignment>()
 
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
@@ -32,6 +31,11 @@ class ModuleInfoAdapter: RecyclerView.Adapter<ModuleInfoAdapter.MyViewHolder>() 
         holder.itemView.assignmentNumber_txt.text = currentItem.assignmentNumber
         holder.itemView.assignmentDetails_txt.text = currentItem.assignmentDetails
         holder.itemView.assignmentDueDate_txt.text = currentItem.assignmentDue
+
+        holder.itemView.assignmentRowLayout.setOnClickListener {
+            val action = ModuleInfoFragmentDirections.actionModuleInfoFragmentToUpdateAssignmentFragment(currentItem)
+            holder.itemView.findNavController().navigate(action)
+        }
     }
 
     fun setData(assignment: List<Assignment>) {

@@ -1,14 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.modules.moduleinfo.UpdateAssignmentFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:padding="24dp"
+        tools:context=".fragments.modules.moduleinfo.updateassignment.UpdateAssignmentFragment">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/uModuleNumber_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="M907"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/uModuleName_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="100dp"
+            android:text="Mobile App Development"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/uModuleNumber_txt"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/updateAssignmentNumber_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Assignment Number"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/uModuleNumber_txt" />
+
+        <EditText
+            android:id="@+id/updateAssignmentDetails_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Assignment Details"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateAssignmentNumber_et" />
+
+        <TextView
+            android:id="@+id/uDueDate_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Due Date:"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateAssignmentDetails_et" />
+
+        <EditText
+            android:id="@+id/updateDueYear_et"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="yyyy"
+            android:inputType="number"
+            android:maxLength="4"
+            app:layout_constraintStart_toEndOf="@+id/uDueDate_txt"
+            app:layout_constraintTop_toBottomOf="@+id/updateAssignmentDetails_et" />
+
+        <EditText
+            android:id="@+id/updateDueMonth_et"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="mm"
+            android:inputType="number"
+            android:maxLength="2"
+            app:layout_constraintStart_toEndOf="@+id/updateDueYear_et"
+            app:layout_constraintTop_toBottomOf="@+id/updateAssignmentDetails_et" />
+
+        <EditText
+            android:id="@+id/updateDueDay_et"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="dd"
+            android:inputType="number"
+            android:maxLength="2"
+            app:layout_constraintStart_toEndOf="@+id/updateDueMonth_et"
+            app:layout_constraintTop_toBottomOf="@+id/updateAssignmentDetails_et" />
+
+        <Button
+            android:id="@+id/updateAssignment_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Update Assignment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateDueMonth_et" />
+
+        <Button
+            android:id="@+id/deleteAssignment_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FF0000"
+            android:text="Delete Assignment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateAssignment_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
