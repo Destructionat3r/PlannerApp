@@ -26,10 +26,9 @@ class ListNotesAdapter: RecyclerView.Adapter<ListNotesAdapter.MyViewHolder>() {
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = noteList[position]
-        holder.itemView.noteTitle_txt.text = currentItem.noteTitle
-        holder.itemView.noteContents_txt.text = currentItem.noteContents
+        holder.itemView.note_btn.text = "${currentItem.noteTitle}\n\n${currentItem.noteContents}"
 
-        holder.itemView.noteRowLayout.setOnClickListener {
+        holder.itemView.note_btn.setOnClickListener {
             val action = ListNotesFragmentDirections.actionListNotesFragmentToUpdateNotesFragment(currentItem)
             holder.itemView.findNavController().navigate(action)
         }

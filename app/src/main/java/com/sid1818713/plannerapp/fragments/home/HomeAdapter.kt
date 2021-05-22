@@ -26,7 +26,8 @@ class HomeAdapter: RecyclerView.Adapter<HomeAdapter.MyViewHolder>() {
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = assignmentList[position]
         holder.itemView.homeModuleNumber_txt.text = currentItem.moduleNumber
-        holder.itemView.homeModuleDescription_txt.text = currentItem.assignmentDetails
+        holder.itemView.homeAssignmentNumber_txt.text = currentItem.assignmentNumber
+        holder.itemView.homeAssignmentDescription_txt.text = currentItem.assignmentDetails
         holder.itemView.homeAssignmentDate_txt.text = currentItem.assignmentDue
     }
 
