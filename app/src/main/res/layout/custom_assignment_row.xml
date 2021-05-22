@@ -4,38 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/assignmentRowLayout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="24dp">
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/assignmentNumber_txt"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/assignment_btn"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="010"
-        android:textSize="36sp"
-        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:text="@string/assignment_button"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/assignmentDetails_txt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="Design, Implemntation and Evaluation of a Prototype (2000 Word Report)"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/assignmentDueDate_txt"
-        app:layout_constraintStart_toEndOf="@+id/assignmentNumber_txt"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/assignmentDueDate_txt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="2021/05/25"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

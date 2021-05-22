@@ -26,11 +26,9 @@ class ModuleInfoAdapter: RecyclerView.Adapter<ModuleInfoAdapter.MyViewHolder>() 
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = assignmentList[position]
-        holder.itemView.assignmentNumber_txt.text = currentItem.assignmentNumber
-        holder.itemView.assignmentDetails_txt.text = currentItem.assignmentDetails
-        holder.itemView.assignmentDueDate_txt.text = currentItem.assignmentDue
+        holder.itemView.assignment_btn.text = "Element ${currentItem.assignmentNumber} - ${currentItem.assignmentDetails}\n\nDue Date: ${currentItem.assignmentDue}"
 
-        holder.itemView.assignmentRowLayout.setOnClickListener {
+        holder.itemView.assignment_btn.setOnClickListener {
             val action = ModuleInfoFragmentDirections.actionModuleInfoFragmentToUpdateAssignmentFragment(currentItem)
             holder.itemView.findNavController().navigate(action)
         }
