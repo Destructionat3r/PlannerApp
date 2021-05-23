@@ -27,4 +27,5 @@
     <string name="note_button">Note Title\n\nNote Contents</string>
     <string name="assignment_button">Assignment Number - Assignment Details \n\nDue Date</string>
     <string name="home_assignment">Module Number\n\nAssignment Number - Assignment Details</string>
+    <string name="bank_holiday_title">Bank Holidays over the next 365 days</string>
 </resources>

@@ -8,7 +8,6 @@ import androidx.lifecycle.viewModelScope
 import com.sid1818713.plannerapp.moduledata.ModuleDatabase
 import com.sid1818713.plannerapp.moduledata.model.Module
 import com.sid1818713.plannerapp.moduledata.repository.ModuleRepository
-import com.sid1818713.plannerapp.notedata.model.Note
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

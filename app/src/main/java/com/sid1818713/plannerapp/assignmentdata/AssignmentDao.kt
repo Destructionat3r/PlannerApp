@@ -3,7 +3,6 @@ package com.sid1818713.plannerapp.assignmentdata
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.sid1818713.plannerapp.assignmentdata.model.Assignment
-import com.sid1818713.plannerapp.moduledata.model.Module
 
 @Dao
 interface AssignmentDao {

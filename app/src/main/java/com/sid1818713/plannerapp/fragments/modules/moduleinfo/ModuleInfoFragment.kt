@@ -36,7 +36,7 @@ class ModuleInfoFragment : Fragment() {
 
         // RecyclerView
         val adapter = ModuleInfoAdapter()
-        val recyclerview = binding.assignmentRecyclerView
+        val recyclerview = binding.assignmentRv
         recyclerview.adapter = adapter
         recyclerview.layoutManager = LinearLayoutManager(requireContext())
 

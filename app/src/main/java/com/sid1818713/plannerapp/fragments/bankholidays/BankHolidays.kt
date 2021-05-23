@@ -26,8 +26,6 @@ class BankHolidays : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_bank_holidays, container, false)
-
-
         bankHolidayList = view.findViewById(R.id.bankHoliday_lv)
 
         val api = Retrofit.Builder()
