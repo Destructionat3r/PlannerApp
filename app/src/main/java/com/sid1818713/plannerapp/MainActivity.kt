@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
+import com.sid1818713.plannerapp.fragments.bankholidays.BankHolidays
 import com.sid1818713.plannerapp.fragments.home.Home
 import com.sid1818713.plannerapp.fragments.modules.Modules
 import com.sid1818713.plannerapp.fragments.notes.Notes
@@ -47,6 +48,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.notes -> {
                 setToolbarTitle("Notes")
                 changeFragment(Notes())
+            }
+
+            R.id.bankHolidays -> {
+                setToolbarTitle("Bank Holidays")
+                changeFragment(BankHolidays())
             }
         }
         return true

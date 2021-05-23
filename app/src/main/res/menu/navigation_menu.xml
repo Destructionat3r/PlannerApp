@@ -14,4 +14,9 @@
         android:id="@+id/notes"
         android:title="Notes"
         android:icon="@drawable/ic_notes"/>
+
+    <item
+        android:id="@+id/bankHolidays"
+        android:title="Bank Holidays"
+        android:icon="@drawable/ic_bank_holiday"/>
 </menu>

@@ -24,7 +24,7 @@ class Home : Fragment() {
 
         // RecyclerView
         val adapter = HomeAdapter()
-        val recyclerView = view.homeAssignmentRecyclerView
+        val recyclerView = view.homeAssignment_rv
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 

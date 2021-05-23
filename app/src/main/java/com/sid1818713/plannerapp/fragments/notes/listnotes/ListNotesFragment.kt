@@ -25,7 +25,7 @@ class ListNotesFragment : Fragment() {
 
         // Recyclerview
         val adapter = ListNotesAdapter()
-        val recyclerView = view.noteRecyclerView
+        val recyclerView = view.note_rv
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
