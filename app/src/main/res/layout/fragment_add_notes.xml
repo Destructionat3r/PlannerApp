@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.notes.addnotes.AddNotesFragment"
-    android:padding="24dp">
+    android:padding="@dimen/padding">
 
     <EditText
         android:id="@+id/addNoteTitle_et"

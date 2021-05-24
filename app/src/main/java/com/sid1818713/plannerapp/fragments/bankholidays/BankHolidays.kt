@@ -1,12 +1,12 @@
 package com.sid1818713.plannerapp.fragments.bankholidays
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.ArrayAdapter
+import android.widget.ListView
+import androidx.fragment.app.Fragment
 import com.sid1818713.plannerapp.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -18,7 +18,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 class BankHolidays : Fragment() {
     private lateinit var bankHolidayList: ListView
     private val BASE_URL="https://date.nager.at/"
-    private var TAG ="BankHolidays"
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -43,7 +42,6 @@ class BankHolidays : Fragment() {
                 for (i in 0 until data.size) {
                     val holiday = data[i]
                     holidayList[i] = "${holiday.name} - ${holiday.date}"
-                    Log.d(TAG, holidayList[i].toString())
                 }
 
                 activity?.runOnUiThread {
